@@ -4,7 +4,7 @@ import { forkJoin } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class DashboardService {
-  private apiUrl = 'https://localhost:7072/api';
+  private apiUrl = 'https://wms-api-latiksha-bmhddyhzfydqdtee.southeastasia-01.azurewebsites.net/api';
 
   constructor(private http: HttpClient) {}
 
