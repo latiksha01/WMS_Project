@@ -5,7 +5,7 @@ import { Project } from '../models/project';
 
 @Injectable({ providedIn: 'root' })
 export class ProjectService {
-  private api = 'https://localhost:7072/api/Project';
+  private api = 'https://wms-api-latiksha-bmhddyhzfydqdtee.southeastasia-01.azurewebsites.net/api/Project';
   constructor(private http: HttpClient) {}
   getAll(): Observable<Project[]> { return this.http.get<Project[]>(this.api); }
   getById(id: number): Observable<Project> { return this.http.get<Project>(`${this.api}/${id}`); }
