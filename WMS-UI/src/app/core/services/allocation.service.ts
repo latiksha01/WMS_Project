@@ -5,7 +5,7 @@ import { Allocation } from '../models/allocation';
 
 @Injectable({ providedIn: 'root' })
 export class AllocationService {
-  private api = 'https://localhost:7072/api/EmployeeProjectAllocation';
+  private api = 'https://wms-api-latiksha-bmhddyhzfydqdtee.southeastasia-01.azurewebsites.net/api/EmployeeProjectAllocation';
   constructor(private http: HttpClient) {}
   getAll(): Observable<Allocation[]> { return this.http.get<Allocation[]>(this.api); }
   getById(id: number): Observable<Allocation> { return this.http.get<Allocation>(`${this.api}/${id}`); }
