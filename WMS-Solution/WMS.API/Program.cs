@@ -139,7 +139,10 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy
-                .WithOrigins("http://localhost:4200")
+                .WithOrigins(
+                    "http://localhost:4200",
+                    "https://yellow-mud-021f49900.7.azurestaticapps.net"
+                )
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
