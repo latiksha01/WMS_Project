@@ -150,12 +150,9 @@ var app = builder.Build();
 // Exception Middleware
 app.UseMiddleware<ExceptionMiddleware>();
 
-// HTTP Pipeline
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// CI/CD Pipeline
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
