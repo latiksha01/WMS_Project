@@ -5,7 +5,7 @@ import { Announcement } from '../models/announcement';
 
 @Injectable({ providedIn: 'root' })
 export class AnnouncementService {
-  private api = 'https://localhost:7072/api/Announcement';
+  private api = 'https://wms-api-latiksha-bmhddyhzfydqdtee.southeastasia-01.azurewebsites.net/api/Announcement';
   constructor(private http: HttpClient) {}
   getAll(): Observable<Announcement[]> { return this.http.get<Announcement[]>(this.api); }
   getById(id: number): Observable<Announcement> { return this.http.get<Announcement>(`${this.api}/${id}`); }
