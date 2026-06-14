@@ -34,7 +34,8 @@
             "outputMode": "static",
             "security": {
               "allowedHosts": []
-            },
+            }
+          },
           "configurations": {
             "production": {
               "budgets": [
