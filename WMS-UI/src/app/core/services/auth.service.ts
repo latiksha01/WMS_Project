@@ -7,7 +7,7 @@ import { LoginResponse } from '../models/login-response';
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
-  private apiUrl = 'https://localhost:7072/api/Auth';
+  private apiUrl = 'https://wms-api-latiksha-bmhddyhzfydqdtee.southeastasia-01.azurewebsites.net/api/Auth';
 
   constructor(private http: HttpClient) {}
 
