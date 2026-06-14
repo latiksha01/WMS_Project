@@ -5,7 +5,7 @@ import { Client } from '../models/client';
 
 @Injectable({ providedIn: 'root' })
 export class ClientService {
-  private api = 'https://localhost:7072/api/Client';
+  private api = 'https://wms-api-latiksha-bmhddyhzfydqdtee.southeastasia-01.azurewebsites.net/api/Client';
   constructor(private http: HttpClient) {}
   getAll(): Observable<Client[]> { return this.http.get<Client[]>(this.api); }
   getById(id: number): Observable<Client> { return this.http.get<Client>(`${this.api}/${id}`); }
