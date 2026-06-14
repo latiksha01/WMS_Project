@@ -5,7 +5,7 @@ import { Employee } from '../models/employee';
 
 @Injectable({ providedIn: 'root' })
 export class EmployeeService {
-  private api = 'https://localhost:7072/api/Employee';
+  private api = 'https://wms-api-latiksha-bmhddyhzfydqdtee.southeastasia-01.azurewebsites.net/api/Employee';
   constructor(private http: HttpClient) {}
   getAll(): Observable<Employee[]> { return this.http.get<Employee[]>(this.api); }
   getById(id: number): Observable<Employee> { return this.http.get<Employee>(`${this.api}/${id}`); }
