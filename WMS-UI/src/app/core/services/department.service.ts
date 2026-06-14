@@ -13,7 +13,7 @@ export class DepartmentService {
 }
 
   private apiUrl =
-    'https://localhost:7072/api/Department';
+    'https://wms-api-latiksha-bmhddyhzfydqdtee.southeastasia-01.azurewebsites.net/api/Department';
 
   constructor(private http: HttpClient) {}
 
