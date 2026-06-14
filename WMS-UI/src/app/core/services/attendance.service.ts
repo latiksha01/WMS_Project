@@ -5,7 +5,7 @@ import { Attendance } from '../models/attendance';
 
 @Injectable({ providedIn: 'root' })
 export class AttendanceService {
-  private api = 'https://localhost:7072/api/Attendance';
+  private api = 'https://wms-api-latiksha-bmhddyhzfydqdtee.southeastasia-01.azurewebsites.net/api/Attendance';
   constructor(private http: HttpClient) {}
   getAll(): Observable<Attendance[]> { return this.http.get<Attendance[]>(this.api); }
   getById(id: number): Observable<Attendance> { return this.http.get<Attendance>(`${this.api}/${id}`); }
